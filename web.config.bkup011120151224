@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.web>
+    <customErrors mode="Off" />
+  </system.web>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="Always" stopProcessing="true">
+          <match url="^(.*)$" />
+          <conditions>
+            <add input="{HTTP_HOST}" pattern="^venkatreddy-001-site1\.1tempurl\.com$" />
+          </conditions>
+          <action type="Redirect" url="http://www.varshamedias.ga/{R:1}" redirectType="Permanent" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>
